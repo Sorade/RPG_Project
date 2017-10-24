@@ -21,7 +21,12 @@ public class PlayerMotor : MonoBehaviour {
 		GetComponent<PlayerController>().onFocusChangedCallback += OnFocusChanged;
 	}
 
-	public void MoveToPoint (Vector3 point)
+    private void OnDisable()
+    {
+        GetComponent<PlayerController>().onFocusChangedCallback -= OnFocusChanged;
+    }
+
+    public void MoveToPoint (Vector3 point)
 	{
 		agent.SetDestination(point);
 	}

@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour {
 			return;
 
 		// If we press left mouse
-		if (Input.GetMouseButtonDown(0))
+		if (Input.GetMouseButton(0))
 		{
 			// Shoot out a ray
 			Ray ray = cam.ScreenPointToRay(Input.mousePosition);

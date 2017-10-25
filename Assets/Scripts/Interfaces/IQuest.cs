@@ -18,7 +18,8 @@ namespace QuestSystem
         string objective { get; }
         int id { get; }
         int questObjectiveCount { get; set; }
-        QuestProgress progress { get; }
+        int questObjectiveCountRequierment { get; }
+        QuestProgress progress { get; set; }
 
     }
 }

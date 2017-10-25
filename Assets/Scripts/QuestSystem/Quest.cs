@@ -5,13 +5,20 @@ using UnityEngine;
 
 namespace QuestSystem
 {
-    public class Quest : MonoBehaviour, IQuest      
+    [System.Serializable]
+    public class Quest : IQuest      
     {
+        [SerializeField]
         private string _title;
+        [SerializeField]
         private string _objective;
-
+        [SerializeField]
         private int _id;
+        [SerializeField]
         private int _questObjectiveCount;
+        [SerializeField]
+        private int _questObjectiveCountRequierment;
+        [SerializeField]
         private QuestProgress _progress;
 
         public QuestProgress progress
@@ -19,6 +26,11 @@ namespace QuestSystem
             get
             {
                 return _progress;
+            }
+
+            set
+            {
+                _progress = value;
             }
         }
 
@@ -56,6 +68,14 @@ namespace QuestSystem
             set
             {
                 _questObjectiveCount = value;
+            }
+        }
+
+        public int questObjectiveCountRequierment
+        {
+            get
+            {
+                return _questObjectiveCountRequierment;
             }
         }
     }

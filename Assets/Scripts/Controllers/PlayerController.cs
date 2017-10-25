@@ -58,8 +58,8 @@ public class PlayerController : MonoBehaviour {
 			if (Physics.Raycast(ray, out hit, 100f, interactionMask))
 			{
 				SetFocus(hit.collider.GetComponent<Interactable>());
-			}
-		}
+            }
+        }
 
 	}
 
@@ -80,12 +80,12 @@ public class PlayerController : MonoBehaviour {
 		// If it's not an interactable, simply set it to null
 		focus = newFocus;
 
-		if (focus != null)
+        if (focus != null)
 		{
 			// Let our focus know that it's being focused
 			focus.OnFocused(transform);
-		}
+        }
 
-	}
+    }
 
 }

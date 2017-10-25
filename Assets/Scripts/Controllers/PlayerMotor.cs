@@ -33,9 +33,9 @@ public class PlayerMotor : MonoBehaviour {
 
 	void OnFocusChanged (Interactable newFocus)
 	{
-		if (newFocus != null)
+        if (newFocus != null)
 		{
-			agent.stoppingDistance = newFocus.radius*.8f;
+            agent.stoppingDistance = newFocus.radius*.8f;
 			agent.updateRotation = false;
 
 			target = newFocus.interactionTransform;
@@ -52,7 +52,7 @@ public class PlayerMotor : MonoBehaviour {
 	{
 		if (target != null)
 		{
-			MoveToPoint (target.position);
+            MoveToPoint (target.position);
 			FaceTarget ();
 
 		}

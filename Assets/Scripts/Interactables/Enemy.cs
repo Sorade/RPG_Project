@@ -16,8 +16,13 @@ public class Enemy : Interactable {
 		stats.OnHealthReachedZero += Die;
 	}
 
-	// When we interact with the enemy: We attack it.
-	public override void Interact()
+    private void OnDisable()
+    {
+        stats.OnHealthReachedZero -= Die;
+    }
+
+    // When we interact with the enemy: We attack it.
+    public override void Interact()
 	{
 		print ("Interact");
 		CharacterCombat combatManager = Player.instance.playerCombatManager;

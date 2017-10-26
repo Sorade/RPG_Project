@@ -14,18 +14,14 @@ namespace QuestSystem
         public List<int> availableQuestIDs = new List<int>();
         public List<int> receivableQuestIDs = new List<int>();
 
-        /*private void OnEnable()
-        {
-            QuestManager.instance.onQuestObjectInteractionCallback += UpdateQuestMarker;
-        }
-
         private void OnDisable()
         {
-            QuestManager.instance.onQuestObjectInteractionCallback -= UpdateQuestMarker;
-        }*/
+            QuestManager.instance.onQuestInteractionCallback -= UpdateQuestMarker;
+        }
 
         private void Start()
         {
+            QuestManager.instance.onQuestInteractionCallback += UpdateQuestMarker;
             UIManager.instance.SetQuestMarker(this);
         }
 
@@ -37,12 +33,16 @@ namespace QuestSystem
             QuestManager.instance.QuestRequest(this);
             //reseting the quest marker after the interaction
             UIManager.instance.SetQuestMarker(this);
-            //QuestManager.instance.onQuestObjectInteractionCallback.Invoke();
+
+            if (QuestManager.instance.onQuestInteractionCallback != null)
+            {           
+                QuestManager.instance.onQuestInteractionCallback.Invoke();
+            }
         }
 
-        /*private void UpdateQuestMarker()
+        private void UpdateQuestMarker()
         {
             UIManager.instance.SetQuestMarker(this);
-        }*/
+        }
     }
 }

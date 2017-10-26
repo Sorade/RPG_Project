@@ -7,9 +7,9 @@ namespace QuestSystem
 {
     public class QuestManager : MonoBehaviour
     {
-        /*
+        
         public  delegate void OnQuestObjectInteraction();
-        public OnQuestObjectInteraction onQuestObjectInteractionCallback;*/
+        public OnQuestObjectInteraction onQuestInteractionCallback;
 
         public static QuestManager instance;
 

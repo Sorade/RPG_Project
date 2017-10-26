@@ -7,6 +7,9 @@ namespace QuestSystem
 {
     public class QuestManager : MonoBehaviour
     {
+        /*
+        public  delegate void OnQuestObjectInteraction();
+        public OnQuestObjectInteraction onQuestObjectInteractionCallback;*/
 
         public static QuestManager instance;
 
@@ -116,8 +119,49 @@ namespace QuestSystem
                 }
             }
             //Check for chain quests
+            CheckChainQuest(questID);
         }
 
+        //CHAIN QUEST CHECK
+        private void CheckChainQuest(int questID)
+        {
+            for (int i = 0; i < questList.Count; i++)
+            {
+                if (questList[i].id == questID && questList[i].nextQuest > 0)
+                {
+                    int nextID = questList[i].nextQuest;
+                    if (questList[nextID].progress == QuestProgress.NOT_AVAILABLE)
+                    {
+                        questList[questList[i].nextQuest].progress = QuestProgress.AVAILABLE;
+                    }
+                    return;
+                }
+            }
+        }
+        /*
+        private void CheckChainQuest(int questID)
+        {
+            int tempID = 0;
+            for (int i = 0; i < questList.Count; i++)
+            {
+                if (questList[i].id == questID && questList[i].nextQuest > 0)
+                {
+                    tempID = questList[i].nextQuest;
+                }
+            }
+
+            if (tempID > 0)
+            {
+                for (int i = 0; i < questList.Count; i++)
+                {
+                    if (questList[i].id == tempID && (questList[i].progress == QuestProgress.NOT_AVAILABLE)
+                    {
+                        questList[i].progress = QuestProgress.AVAILABLE;
+                    }
+                }
+            }
+        }
+        */
         //ADD ITEMS
         public void AddQuestItem(string questObjective, int itemAmount)
         {

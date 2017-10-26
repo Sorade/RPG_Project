@@ -19,6 +19,8 @@ namespace QuestSystem
         [SerializeField]
         private int _questObjectiveCountRequierment;
         [SerializeField]
+        private int _nextQuest;
+        [SerializeField]
         private QuestProgress _progress;
 
         public QuestProgress progress
@@ -76,6 +78,14 @@ namespace QuestSystem
             get
             {
                 return _questObjectiveCountRequierment;
+            }
+        }
+
+        public int nextQuest
+        {
+            get
+            {
+                return _nextQuest;
             }
         }
     }

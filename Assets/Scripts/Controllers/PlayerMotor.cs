@@ -18,18 +18,24 @@ public class PlayerMotor : MonoBehaviour {
 	void Start ()
 	{
 		agent = GetComponent<NavMeshAgent>();
-		GetComponent<PlayerController>().onFocusChangedCallback += OnFocusChanged;
-	}
+        //GetComponent<PlayerController>().onFocusChangedCallback += OnFocusChanged;
+        PlayerController.onFocusChangedCallback += OnFocusChanged;
+        Interactable.onInteractedCallback += MoveToPoint;
+
+    }
 
     private void OnDisable()
     {
-        GetComponent<PlayerController>().onFocusChangedCallback -= OnFocusChanged;
+        //GetComponent<PlayerController>().onFocusChangedCallback -= OnFocusChanged;
+        PlayerController.onFocusChangedCallback -= OnFocusChanged;
+        Interactable.onInteractedCallback -= MoveToPoint;
+
     }
 
     public void MoveToPoint (Vector3 point)
 	{
-		agent.SetDestination(point);
-	}
+        agent.SetDestination(point);
+    }
 
 	void OnFocusChanged (Interactable newFocus)
 	{

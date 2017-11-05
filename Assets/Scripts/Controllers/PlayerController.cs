@@ -8,7 +8,7 @@ using UnityEngine.EventSystems;
 public class PlayerController : MonoBehaviour {
 
 	public delegate void OnFocusChanged(Interactable newFocus);
-	public OnFocusChanged onFocusChangedCallback;
+	public static OnFocusChanged onFocusChangedCallback;
 
 	public Interactable focus;	// Our current focus: Item, Enemy etc.
 

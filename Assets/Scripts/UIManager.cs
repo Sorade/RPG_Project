@@ -8,12 +8,25 @@ public class UIManager : MonoBehaviour {
     public static UIManager instance;
 
     // Quest UI variables
+    #region
     public Sprite questAvailableSprite; //exclamation point
     public Sprite questReceivableSprite; //interrogation point
+    #endregion
+    // Dialog UI variables
+    #region
+    public Text mainText;
+    public Text[] replies;
+    public bool[] selectedReply;
+    #endregion
 
     private void Awake()
     {
         MakeSingleton();
+    }
+
+    private void Start()
+    {
+        selectedReply = new bool[4];
     }
 
     void MakeSingleton()
@@ -34,6 +47,7 @@ public class UIManager : MonoBehaviour {
     }
 
     // Quest UIs
+    #region
     public bool CheckAvailableQuests(QuestObject questObject)
     {
         for (int i = 0; i < QuestManager.instance.questList.Count; i++)
@@ -104,5 +118,13 @@ public class UIManager : MonoBehaviour {
             questObject.questMarker.SetActive(false);
         }
     }
+    #endregion //QuestUI
 
+    //Dialog UI
+    #region
+    public void SetSelectedReply(int replyID)
+    {
+        selectedReply[replyID] = true;
+    }
+    #endregion
 }

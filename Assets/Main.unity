@@ -8706,7 +8706,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f8dc043664497d4cabb0af9cb7303cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phases: []
+  phases:
+  - {fileID: 1984879869}
+  - {fileID: 1984879867}
   animator: {fileID: 0}
 --- !u!4 &2010138948 stripped
 Transform:

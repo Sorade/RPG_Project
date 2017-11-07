@@ -1433,7 +1433,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 325673774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -359.55057, z: 0}
+  m_LocalPosition: {x: 0, y: -359.43127, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 36090503}
@@ -1683,6 +1683,68 @@ Transform:
   m_PrefabParentObject: {fileID: 4595215152421352, guid: 4a5e8315f342741d1963b87f80a4a332,
     type: 2}
   m_PrefabInternal: {fileID: 854511414}
+--- !u!1001 &403784176
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1984879866}
+    m_Modifications:
+    - target: {fileID: 4208214597131568, guid: 405f7e4e13b030249bae6a94aa432367, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4208214597131568, guid: 405f7e4e13b030249bae6a94aa432367, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4208214597131568, guid: 405f7e4e13b030249bae6a94aa432367, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4208214597131568, guid: 405f7e4e13b030249bae6a94aa432367, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4208214597131568, guid: 405f7e4e13b030249bae6a94aa432367, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4208214597131568, guid: 405f7e4e13b030249bae6a94aa432367, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4208214597131568, guid: 405f7e4e13b030249bae6a94aa432367, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4208214597131568, guid: 405f7e4e13b030249bae6a94aa432367, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114372428179931814, guid: 405f7e4e13b030249bae6a94aa432367,
+        type: 2}
+      propertyPath: text
+      value: My name is Sorade
+      objectReference: {fileID: 0}
+    - target: {fileID: 114149706023546100, guid: 405f7e4e13b030249bae6a94aa432367,
+        type: 2}
+      propertyPath: text
+      value: Bob
+      objectReference: {fileID: 0}
+    - target: {fileID: 114425280609049292, guid: 405f7e4e13b030249bae6a94aa432367,
+        type: 2}
+      propertyPath: text
+      value: Do you have work ?
+      objectReference: {fileID: 0}
+    - target: {fileID: 114277456183462050, guid: 405f7e4e13b030249bae6a94aa432367,
+        type: 2}
+      propertyPath: text
+      value: Fairwell !
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 405f7e4e13b030249bae6a94aa432367, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &411834023
 GameObject:
   m_ObjectHideFlags: 0
@@ -4343,6 +4405,16 @@ Transform:
   m_PrefabParentObject: {fileID: 4169149439611984, guid: ce7e7865773b1c24daec1e97606d35ff,
     type: 2}
   m_PrefabInternal: {fileID: 1365476458}
+--- !u!1 &1002657701 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1328732348278020, guid: 405f7e4e13b030249bae6a94aa432367,
+    type: 2}
+  m_PrefabInternal: {fileID: 403784176}
+--- !u!4 &1002657702 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4208214597131568, guid: 405f7e4e13b030249bae6a94aa432367,
+    type: 2}
+  m_PrefabInternal: {fileID: 403784176}
 --- !u!1001 &1035061487
 Prefab:
   m_ObjectHideFlags: 0
@@ -5473,7 +5545,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1290923794}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 426, y: -79.55057, z: 0}
+  m_LocalPosition: {x: 426, y: -79.431274, z: 0}
   m_LocalScale: {x: 1.4273643, y: 1.4273639, z: 1.4273639}
   m_Children:
   - {fileID: 1512117537}
@@ -8523,8 +8595,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1941745489}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 222.5, y: 125, z: 0}
-  m_LocalScale: {x: 0.34765625, y: 0.34765625, z: 0.34765625}
+  m_LocalPosition: {x: 211, y: 118.5, z: 0}
+  m_LocalScale: {x: 0.3296875, y: 0.3296875, z: 0.3296875}
   m_Children:
   - {fileID: 1290923795}
   - {fileID: 1529498837}
@@ -8621,8 +8693,8 @@ GameObject:
   - component: {fileID: 1984879866}
   - component: {fileID: 1984879868}
   - component: {fileID: 1984879870}
-  - component: {fileID: 1984879867}
   - component: {fileID: 1984879869}
+  - component: {fileID: 1984879867}
   m_Layer: 0
   m_Name: StartDialog
   m_TagString: Untagged
@@ -8639,7 +8711,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1002657702}
   m_Father: {fileID: 1418146976}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8651,12 +8724,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1984879865}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5d7c87d056b7204eaa8e9768d1c9a5e, type: 3}
+  m_Script: {fileID: 11500000, guid: cfaf3588441dfcb4f99473ba7ebfb5e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phaseID: 0
-  nameOfMSB: Welcome
-  mainText: Hello my boy !
+  phaseID: 1
+  nameOfMSB: What is your name ?
+  mainText: What is our name ?
+  repliesGO: {fileID: 1002657701}
+  replies: []
   animator: {fileID: 0}
   dialogState: {fileID: 0}
   dialog: {fileID: 0}
@@ -8685,16 +8760,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1984879865}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a134840da170d794cac5fba3f129da13, type: 3}
+  m_Script: {fileID: 11500000, guid: cfaf3588441dfcb4f99473ba7ebfb5e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phaseID: 1
-  nameOfMSB: What is your name ?
-  mainText: What is your name boy ?
+  phaseID: 0
+  nameOfMSB: Welcome
+  mainText: Hello boy.
+  repliesGO: {fileID: 1002657701}
+  replies: []
   animator: {fileID: 0}
   dialogState: {fileID: 0}
   dialog: {fileID: 0}
-  reply: My name is Sorade.
 --- !u!114 &1984879870
 MonoBehaviour:
   m_ObjectHideFlags: 0

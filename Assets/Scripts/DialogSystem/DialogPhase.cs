@@ -6,9 +6,14 @@ using UnityEngine;
 public class DialogPhase : MonoBehaviour
 {
     public int phaseID;
-    public string nameOfMSB;
+    public string nameOfMSB;    
     [TextArea(1,10)]
     public string mainText;
+
+    [Header("Replies")]
+    public GameObject repliesGO;
+    [HideInInspector]
+    public Reply[] replies;
     [HideInInspector]
     public Animator animator;    // Reference to the Animator component on this gameobject.
     [HideInInspector]
@@ -21,15 +26,43 @@ public class DialogPhase : MonoBehaviour
     {
         // Find a reference to the Animator component in Awake since it exists in the scene.
         animator = GetComponent<Animator>();
+        replies = repliesGO.GetComponents<Reply>();
     }
 
-
-    /*void Start()
+    public void SetActiveReplies()
     {
-        // Find a reference to the ExampleStateMachineBehaviour in Start since it might not exist yet in Awake.
-        dialogState = animator.GetBehaviour<DialogStateBehaviour>();
-
-        // Set the StateMachineBehaviour's reference to an ExampleMonoBehaviour to this.
-        dialogState.phase = this;
-    }*/
+        for (int i = 0; i < UIManager.instance.replies.Length; i++)
+        {            
+            if (i < replies.Length)
+            {
+                replies[i].order = i; //sets the order of the reply to its default order
+                if (replies[i].CheckConditions())
+                {
+                    // Checks if the previous reply has failed, if it has it displays the text in it,
+                    // and changes the order of the reply to the previous reply index          
+                    if (i > 1 && !UIManager.instance.replies[i - 1].enabled)
+                    {
+                        UIManager.instance.replies[i - 1].enabled = true;
+                        UIManager.instance.replies[i - 1].text = replies[i].text;
+                        replies[i].order = i - 1;
+                    }
+                    else
+                    {
+                        UIManager.instance.replies[i].enabled = true;
+                        UIManager.instance.replies[i].text = replies[i].text;
+                    }
+                }
+                else
+                {
+                    UIManager.instance.replies[i].enabled = false;
+                    UIManager.instance.replies[i].text = "";
+                }
+            }
+            else
+            {
+                UIManager.instance.replies[i].enabled = false;
+                UIManager.instance.replies[i].text = "";
+            }
+        }
+    }
 }

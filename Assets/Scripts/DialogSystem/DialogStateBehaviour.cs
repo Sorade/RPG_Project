@@ -12,6 +12,7 @@ public class DialogStateBehaviour : StateMachineBehaviour {
     public override void OnStateEnter(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
     {
         UIManager.instance.mainText.text = phase.mainText;
+        phase.SetActiveReplies();
         Init(animator, animatorStateInfo, layerIndex);
     }
 

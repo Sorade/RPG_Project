@@ -3,9 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Condition : MonoBehaviour {
+    [HideInInspector]
+    public Animator animator;
 
-	// checks if the condition is met
-	public virtual bool Check () {
+    // Use this for initialization
+    void Awake()
+    {
+        animator = GetComponentInParent<Animator>();
+    }
+    // checks if the condition is met
+    public virtual bool Check () {
         return true;
 	}
 }

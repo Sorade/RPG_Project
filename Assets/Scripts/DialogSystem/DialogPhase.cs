@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Dialog))]
+
 public class DialogPhase : MonoBehaviour
 {
     public int phaseID;
@@ -11,7 +11,6 @@ public class DialogPhase : MonoBehaviour
     public string mainText;
 
     [Header("Replies")]
-    public GameObject repliesGO;
     [HideInInspector]
     public Reply[] replies;
     [HideInInspector]
@@ -25,8 +24,8 @@ public class DialogPhase : MonoBehaviour
     void Awake()
     {
         // Find a reference to the Animator component in Awake since it exists in the scene.
-        animator = GetComponent<Animator>();
-        replies = repliesGO.GetComponents<Reply>();
+        animator = GetComponentInParent<Animator>();
+        replies = GetComponentsInChildren<Reply>();
     }
 
     public void SetActiveReplies()

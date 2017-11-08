@@ -20,4 +20,15 @@ public class DialogStateBehaviour : StateMachineBehaviour {
     {
 
     }
+
+    public override void OnStateUpdate(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
+    {
+        for (int i = 0; i < UIManager.instance.selectedReply.Length; i++)
+        {
+            if (UIManager.instance.selectedReply[i])
+            {
+                phase.replies[i].TriggerReactions();
+            }
+        }
+    }
 }

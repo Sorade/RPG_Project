@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Animator))]
 public class Dialog : MonoBehaviour {
 
     public DialogPhase[] phases;
@@ -15,6 +16,7 @@ public class Dialog : MonoBehaviour {
         // Find a reference to the Animator component in Awake since it exists in the scene.
         animator = GetComponent<Animator>();
         phaseBehaviours = animator.GetBehaviours<DialogStateBehaviour>();
+        phases = GetComponentsInChildren<DialogPhase>();
         SetUpDialog();
     }
 

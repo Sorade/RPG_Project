@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Reaction : MonoBehaviour {
+    [HideInInspector]
+    public Animator animator;
 
 	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	void Awake () {
+        animator = GetComponentInParent<Animator>();
+    }
+
+    // Update is called once per frame
+    public virtual void React () {
+    }
 }

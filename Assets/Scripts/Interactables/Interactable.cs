@@ -16,10 +16,12 @@ public class Interactable : MonoBehaviour {
     public float radius = 3f;
 	public Transform interactionTransform;
 
+    [HideInInspector]
 	public bool isFocus = false;	// Is this interactable currently being focused?
-	public Transform playerTransform;		// Reference to the player transform
-
-	public bool hasInteracted = false;	// Have we already interacted with the object?
+    [HideInInspector]
+    public Transform playerTransform;		// Reference to the player transform
+    [HideInInspector]
+    public bool hasInteracted = false;	// Have we already interacted with the object?
 
 	void Update ()
 	{

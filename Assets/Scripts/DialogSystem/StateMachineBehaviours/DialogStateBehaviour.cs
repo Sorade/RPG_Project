@@ -8,8 +8,8 @@ namespace DialogSystem
     {
         public DialogPhase phase;
         public int phaseID;
-        public int currentPhaseID;
-        public int nextPhaseID;
+        //public int currentPhaseID;
+        //public int nextPhaseID;
 
         // Use this for initialization
         public override void OnStateEnter(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
@@ -31,6 +31,8 @@ namespace DialogSystem
                 if (UIManager.instance.selectedReply[i])
                 {
                     phase.replies[i].TriggerReactions();
+                    UIManager.instance.selectedReply[i] = false;
+                    return;
                 }
             }
         }

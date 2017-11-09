@@ -124,6 +124,9 @@ public class UIManager : MonoBehaviour {
     #region
     public void SetSelectedReply(int replyID)
     {
+        //makes sure all other replies are false by resseting them all
+        //for (int i = 0; i < selectedReply.Length; i++) { selectedReply[i] = false; }
+        //sets the wanted reply to true
         selectedReply[replyID] = true;
     }
     #endregion

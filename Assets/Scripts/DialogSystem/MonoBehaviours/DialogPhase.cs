@@ -33,6 +33,8 @@ namespace DialogSystem
         {
             for (int i = 0; i < UIManager.instance.replies.Length; i++)
             {
+                //by default sets the reply button text to disabled
+                UIManager.instance.replies[i].enabled = false;
                 if (i < replies.Length)
                 {
                     replies[i].order = i; //sets the order of the reply to its default order

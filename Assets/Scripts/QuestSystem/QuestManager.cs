@@ -182,6 +182,19 @@ namespace QuestSystem
         //REMOVE ITEMS
 
         //BOOL Methods
+        public bool RequestProgress(int questID, QuestProgress progress)
+        {
+            for (int i = 0; i < questList.Count; i++)
+            {
+                if (questList[i].id == questID && questList[i].progress == progress)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        /*
         public bool RequestAvailable (int questID)
         {
             for (int i = 0; i < questList.Count; i++)
@@ -216,6 +229,6 @@ namespace QuestSystem
                 }
             }
             return false;
-        }        
+        }*/       
     }
 }

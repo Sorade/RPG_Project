@@ -85,7 +85,7 @@ public class EquipmentManager : MonoBehaviour {
 			onEquipmentChanged.Invoke(newItem, oldItem);
 
 		currentEquipment [slotIndex] = newItem;
-		Debug.Log(newItem.name + " equipped!");
+		//Debug.Log(newItem.name + " equipped!");
 
 		if (newItem.prefab) {
 			AttachToMesh (newItem.prefab, slotIndex);

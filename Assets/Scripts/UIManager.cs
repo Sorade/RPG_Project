@@ -14,10 +14,27 @@ public class UIManager : MonoBehaviour {
     #endregion
     // Dialog UI variables
     #region
+    [SerializeField]
+    GameObject DialogBox;
     public Text mainText;
     public Text[] replies;
     public bool[] selectedReply;
     #endregion
+
+    private void OnEnable()
+    {
+        EventManager.StartListening(SimpleEvent.DIALOG_STARTED, InvertDialogPanelState);
+        EventManager.StartListening(SimpleEvent.DIALOG_ENDED, InvertDialogPanelState);
+
+    }
+
+
+    private void OnDisable()
+    {
+        EventManager.StopListening(SimpleEvent.DIALOG_STARTED, InvertDialogPanelState);
+        EventManager.StopListening(SimpleEvent.DIALOG_ENDED, InvertDialogPanelState);
+
+    }
 
     private void Awake()
     {
@@ -128,6 +145,11 @@ public class UIManager : MonoBehaviour {
         //for (int i = 0; i < selectedReply.Length; i++) { selectedReply[i] = false; }
         //sets the wanted reply to true
         selectedReply[replyID] = true;
+    }
+
+    void InvertDialogPanelState()
+    {
+        DialogBox.SetActive(!DialogBox.activeSelf);
     }
     #endregion
 }

@@ -1548,7 +1548,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &325673775
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1556,7 +1556,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 325673774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -360.60214, z: 0}
+  m_LocalPosition: {x: 0, y: -359.72415, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 36090503}
@@ -2413,6 +2413,7 @@ GameObject:
   - component: {fileID: 441770172}
   - component: {fileID: 441770173}
   - component: {fileID: 441770174}
+  - component: {fileID: 441770175}
   m_Layer: 0
   m_Name: Reactions
   m_TagString: Untagged
@@ -2460,6 +2461,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setActive: 0
   objectToSet: {fileID: 1710093304}
+--- !u!114 &441770175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 441770171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7fe83bd005fcae4a99936b61c2d9007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventName: 0
 --- !u!4 &447457791 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4433006447830956, guid: 65b6388fdf5b5d24393f288fe96f3552,
@@ -3366,6 +3379,7 @@ GameObject:
   - component: {fileID: 656342319}
   - component: {fileID: 656342321}
   - component: {fileID: 656342320}
+  - component: {fileID: 656342322}
   m_Layer: 0
   m_Name: Reactions
   m_TagString: Untagged
@@ -3413,6 +3427,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   nextPhaseID: -1
+--- !u!114 &656342322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 656342318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7fe83bd005fcae4a99936b61c2d9007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventName: 0
 --- !u!1001 &684305082
 Prefab:
   m_ObjectHideFlags: 0
@@ -4713,7 +4739,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &884856910
 Transform:
   m_ObjectHideFlags: 0
@@ -4733,7 +4759,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 884856909}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 432e227ac471cc344867a7f44a9a6060, type: 3}
   m_Name: 
@@ -5702,6 +5728,7 @@ GameObject:
   - component: {fileID: 1151928157}
   - component: {fileID: 1151928160}
   - component: {fileID: 1151928161}
+  - component: {fileID: 1151928162}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5795,6 +5822,7 @@ MonoBehaviour:
     type: 3}
   questReceivableSprite: {fileID: 21300000, guid: 6e4c7e4a57423564ba65eafd6de96b8d,
     type: 3}
+  DialogBox: {fileID: 325673774}
   mainText: {fileID: 36090504}
   replies:
   - {fileID: 578085114}
@@ -5802,6 +5830,17 @@ MonoBehaviour:
   - {fileID: 1311235465}
   - {fileID: 341106872}
   selectedReply: 
+--- !u!114 &1151928162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1151928156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 489b105a56ff0de41a0e892c3af92a2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1152042377
 GameObject:
   m_ObjectHideFlags: 0
@@ -6222,7 +6261,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1290923794}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 426, y: -80.60214, z: 0}
+  m_LocalPosition: {x: 426, y: -79.72415, z: 0}
   m_LocalScale: {x: 1.4273643, y: 1.4273639, z: 1.4273639}
   m_Children:
   - {fileID: 1512117537}
@@ -9506,8 +9545,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1941745489}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 232.5, y: 131, z: 0}
-  m_LocalScale: {x: 0.36328125, y: 0.36328125, z: 0.36328125}
+  m_LocalPosition: {x: 290, y: 163, z: 0}
+  m_LocalScale: {x: 0.453125, y: 0.453125, z: 0.453125}
   m_Children:
   - {fileID: 1290923795}
   - {fileID: 1529498837}

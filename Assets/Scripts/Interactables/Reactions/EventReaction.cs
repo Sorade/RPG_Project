@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SetActiveReaction : Reaction {
+public class EventReaction : Reaction {
     [SerializeField]
-    bool setActive;
-    [SerializeField]
-    GameObject objectToSet;
-
+    SimpleEvent eventName;
+    
     public override void React()
     {
         base.React();
-        objectToSet.SetActive(setActive);
+        Debug.Log("End");
+
+        EventManager.TriggerEvent(eventName);
     }
 }

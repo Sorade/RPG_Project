@@ -15,6 +15,7 @@ public class DialogInteraction : Interactable {
 
     void StartConversation()
     {
+        EventManager.TriggerEvent(SimpleEvent.DIALOG_STARTED);
         dialog.SetActive(true);
     }
 }

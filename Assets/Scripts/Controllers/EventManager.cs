@@ -3,7 +3,7 @@ using UnityEngine.Events;
 using System.Collections;
 using System.Collections.Generic;
 
-public enum SimpleEvent { DIALOG_ENDED, DIALOG_STARTED}
+public enum SimpleEvent { DIALOG_ENDED, DIALOG_STARTED, SCENE_LOADED}
 
 public class EventManager : MonoBehaviour
 {

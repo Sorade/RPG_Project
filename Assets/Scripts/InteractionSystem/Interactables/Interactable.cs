@@ -8,7 +8,8 @@ using UnityEngine.AI;
 */
 
 [RequireComponent(typeof(ColorOnHover))]
-public class Interactable : MonoBehaviour {
+public class Interactable : MonoBehaviour
+{
 
     public delegate void OnInteracted(Vector3 point);
     public static OnInteracted onInteractedCallback;
@@ -23,7 +24,7 @@ public class Interactable : MonoBehaviour {
     [HideInInspector]
     public bool hasInteracted = false;	// Have we already interacted with the object?
 
-	void Update ()
+    void Update ()
 	{
         CheckInteractAllowed();
     }

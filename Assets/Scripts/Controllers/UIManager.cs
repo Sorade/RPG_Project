@@ -65,7 +65,7 @@ public class UIManager : MonoBehaviour {
 
     // Quest UIs
     #region
-    public bool CheckAvailableQuests(QuestObject questObject)
+    public bool CheckAvailableQuests(QuestInteractable questObject)
     {
         for (int i = 0; i < QuestManager.instance.questList.Count; i++)
         {
@@ -80,7 +80,7 @@ public class UIManager : MonoBehaviour {
         return false;
     }
 
-    public bool CheckAcceptedQuests(QuestObject questObject)
+    public bool CheckAcceptedQuests(QuestInteractable questObject)
     {
         for (int i = 0; i < QuestManager.instance.questList.Count; i++)
         {
@@ -95,7 +95,7 @@ public class UIManager : MonoBehaviour {
         return false;
     }
 
-    public bool CheckCompletedQuests(QuestObject questObject)
+    public bool CheckCompletedQuests(QuestInteractable questObject)
     {
         for (int i = 0; i < QuestManager.instance.questList.Count; i++)
         {
@@ -110,7 +110,7 @@ public class UIManager : MonoBehaviour {
         return false;
     }
 
-    public void SetQuestMarker(QuestObject questObject)
+    public void SetQuestMarker(QuestInteractable questObject)
     {
         if (CheckCompletedQuests(questObject))
         {

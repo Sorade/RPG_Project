@@ -39,7 +39,7 @@ namespace QuestSystem
         }
 
         //REQUEST QUEST
-        public void QuestRequest(QuestObject questObject)
+        public void QuestRequest(QuestInteractable questObject)
         {
             //CHECKING FOR AVAILABLE QUEST
             if (questObject.availableQuestIDs.Count > 0)
